@@ -20,6 +20,9 @@ def read_file(filepath, header=0):
     file = open(filepath, 'r')
     file.seek(0)
     text = file.read()
+    # header = re.findall('\n\n', text)
+    header = text.find("\n\n")
+    # print(header)
     return text[:header], text[header:]
 
 def sentence_tokenizer(text):
@@ -34,11 +37,11 @@ def SentPreprocessing(text):
     text = text.strip()
     text = text.lower()
     # text = re.sub(r'[^\w]', ' ', text)
-    text = re.sub(r'\d+.\s+', '', text)
-    for i in string.punctuation:
-        if (i not in ['.', '!', '?', "@"]):
-            text = text.replace(i, ' ')
-    text = re.sub(r'\d+', '', text)
+    # text = re.sub(r'\d+.\s+', '.', text)
+    # for i in string.punctuation:
+    #     if (i not in ['.', '!', '?', "@"]):
+    #         text = text.replace(i, ' ')
+    # text = re.sub(r'\d+', '', text)
     return text
 
 def WordPreProcessing(text):
@@ -48,9 +51,9 @@ def WordPreProcessing(text):
 if __name__ == "__main__":
     filepath = "./20_newsgroups/alt.atheism/49960"
     filepath = "./20_newsgroups/comp.graphics/37261"
-    header, text = read_file(filepath, header=687)
-    header = SentPreprocessing(header)
-    text = SentPreprocessing(text)
+    filepath = "./20_newsgroups/comp.graphics/38382"
+    filepath = "./20_newsgroups/alt.atheism/53293"
+    header, text = read_file(filepath)
     # print(header[:100])
     # print(text[:100])
     while(True):
@@ -64,6 +67,8 @@ if __name__ == "__main__":
         Option = int(input("Enter Input: "))
 
         if (Option == 1):
+            header = SentPreprocessing(header)
+            text = SentPreprocessing(text)
             sentences = sentence_tokenizer(text)
             for i in range(len(sentences)):
                 print(sentences[i], i)
@@ -71,7 +76,10 @@ if __name__ == "__main__":
             text = WordPreProcessing(text)
             words = word_tokenizer(text)
             print("Words count:", len(words))
+
         elif (Option == 2):
+            header = SentPreprocessing(header)
+            text = SentPreprocessing(text)
             words = word_tokenizer(text)
             vowels = ('a', 'e', 'i', 'o', 'u')
             consonants = ('b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z')
@@ -84,17 +92,19 @@ if __name__ == "__main__":
                     vowelCount += 1
             print("Words starting with Consonants:", consonantCount)
             print("Words starting with Vowels:", vowelCount)
+
         elif (Option == 3):
-            Emails = re.findall(r'[\w\.-]+@[\w\.-]+', header)
-            Emails += re.findall(r'[\w\.-]+@[\w\.-]+', text)
+            Emails = re.findall(r'[\w\$\.-]+@[\w\.-]+\.\w+', header)
+            Emails += re.findall(r'[\w\$\.-]+@[\w\.-]+\.\w+', text)
             print("Email Count:", len(Emails))
             for email in Emails:
                 print(email)
+
         elif (Option == 4):
             NewFilePath = str(input("Enter valid file path: "))
-            Header = int(input("Enter header lenght in lines: "))
+            # Header = int(input("Enter header lenght in lines: "))
             FindWord = str(input("Enter word: ")).lower()
-            header, text = read_file(NewFilePath, header=Header)
+            header, text = read_file(NewFilePath)
             text = SentPreprocessing(text)
             sentences = sentence_tokenizer(text)
             count = 0
@@ -107,9 +117,9 @@ if __name__ == "__main__":
 
         elif (Option == 5):
             NewFilePath = str(input("Enter valid file path: "))
-            Header = int(input("Enter header lenght in lines: "))
+            # Header = int(input("Enter header lenght in lines: "))
             FindWord = str(input("Enter word: ")).lower()
-            header, text = read_file(NewFilePath, header=Header)
+            header, text = read_file(NewFilePath)
             text = SentPreprocessing(text)
             sentences = sentence_tokenizer(text)
             count = 0
@@ -122,9 +132,9 @@ if __name__ == "__main__":
 
         elif (Option == 6):
             NewFilePath = str(input("Enter valid file path: "))
-            Header = int(input("Enter header lenght in lines: "))
+            # Header = int(input("Enter header lenght in lines: "))
             FindWord = str(input("Enter word: ")).lower()
-            header, text = read_file(NewFilePath, header=Header)
+            header, text = read_file(NewFilePath)
             text = SentPreprocessing(text)
             text = WordPreProcessing(text)
             words = word_tokenizer(text)
@@ -132,7 +142,7 @@ if __name__ == "__main__":
             for w in words:
                 if (w == FindWord):
                     count += 1
-            print("Number of sentences contains that word:", count)
+            print("Count of a word in the input file:", count)
             
 
 
