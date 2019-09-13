@@ -1,0 +1,39 @@
+Path: cantaloupe.srv.cs.cmu.edu!das-news.harvard.edu!ogicse!uwm.edu!zaphod.mps.ohio-state.edu!caen!usenet.cis.ufl.edu!rap
+From: rap@coconut.cis.ufl.edu (Ryan Porter)
+Newsgroups: comp.graphics
+Subject: Re: DMORPH
+Message-ID: <1pqlhnINN8k1@snoopy.cis.ufl.edu>
+Date: 6 Apr 93 01:14:31 GMT
+Article-I.D.: snoopy.1pqlhnINN8k1
+References: <1993Apr3.183303.6442@usl.edu>
+Organization: Univ. of Florida CIS Dept.
+Lines: 34
+NNTP-Posting-Host: coconut.cis.ufl.edu
+
+
+Dr. Karageorghis said "Push It" by Salt-N-Pepa and "Drop It Like It's
+Hot" by Snoop Dogg are around that range, as is the dance remix of
+"Umbrella" by Rihanna (so maybe the pop star was onto something). For
+a high-intensity workout like a hard run, he suggested Glenn Frey's
+"The Heat Is On."
+
+
+Ms. Goldberg also includes on her playlist "Don't Phunk With My Heart"
+by the Black Eyed Peas (130 B.P.M.), "Mr. Brightside" by the Killers
+(150 B.P.M.), and "Dancing Queen" by Abba. The musical style that
+seems to most reliably contain a high B.P.M. is dance music, said
+Richard Petty, the founder of Power Music, a company that has produced
+workout compilations for instructors and fitness enthusiasts for two
+decades. "A rock song doesn't have that same consistency," said
+Mr. Petty, a former D.J. who takes a metronomic approach to making
+exercise music: He chooses a hit song with a catchy melody - say,
+"Gold Digger" by Kanye West - and produces a remix whose B.P.M. count
+is tailored to experience level and type of workout.
+
+E-mail me on abc094@gmail.com, or on xyz110.22a@rediffmail.edu.in.
+
+I recently got a file describing a library of rendering routines 
+called SIPP (SImple Polygon Processor). Then Could anyone tell me where I can 
+FTP the source code and which is the newest version around? Also, 'I've never used Renderman so I was wondering if Renderman 
+is like SIPP'?  ie. a library of rendering routines which one uses to make 
+a program that creates the image...

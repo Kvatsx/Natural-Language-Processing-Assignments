@@ -53,6 +53,7 @@ if __name__ == "__main__":
     filepath = "./20_newsgroups/comp.graphics/37261"
     filepath = "./20_newsgroups/comp.graphics/38382"
     filepath = "./20_newsgroups/alt.atheism/53293"
+    filepath = "Development_Set.txt"
     header, text = read_file(filepath)
     # print(header[:100])
     # print(text[:100])
@@ -95,9 +96,11 @@ if __name__ == "__main__":
 
         elif (Option == 3):
             Emails = re.findall(r'[\w\$\.-]+@[\w\.-]+\.\w+', header)
-            Emails += re.findall(r'[\w\$\.-]+@[\w\.-]+\.\w+', text)
-            print("Email Count:", len(Emails))
+            Emails2 = re.findall(r'[\w\$\.-]+@[\w\.-]+\.\w+', text)
+            print("Email Count:", len(Emails) + len(Emails2))
             for email in Emails:
+                print(email)
+            for email in Emails2:
                 print(email)
 
         elif (Option == 4):
