@@ -1,0 +1,20 @@
+November NNP B-NP B-NP
+15 CD I-NP O
+COMMA COMMA O O
+1996 CD B-NP B-NP
+
+Dear JJ B-NP B-NP
+Personal JJ I-NP I-NP
+Donor NN I-NP I-NP
+: . O O
+
+In IN O O
+the DT B-NP B-NP
+short JJ I-NP I-NP
+while NN I-NP I-NP
+since IN O O
+Goodwill NNP B-NP O
+helped VBD O O
+him PRP B-NP B-NP
+find VB O O
+his PRP$ B-NP B-NP
