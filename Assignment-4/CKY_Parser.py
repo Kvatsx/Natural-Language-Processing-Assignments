@@ -265,8 +265,6 @@ def cky_parser(sent, old_prod):
 def ShowTree(root):
     if root.val != None:
         return "(" + root.root + " " + root.val + ")"
-    left = 2 + len(root.left.root)
-    right = 2 + len(root.right.root)
     return "(" + root.root + " " + ShowTree(root.left) + " " +  ShowTree(root.right) + ")"
                 
 
