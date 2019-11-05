@@ -1,18 +1,32 @@
-i	PRP
-'d	MD
-like	VB
+i		PRP
+want	VBP
+it	PRP
 to	TO
-go	VB
-to	IN
-a	DT
-fancy	JJ
-restaurant	.
+be	VB
+lunch	.
 .	.
 
-i	PRP
-'d	MD
-like	VB
-french	JJ
-food	.
+about	IN
+twenty	CD
+minutes	NNS
+'	POS
+walk	.
+.	.
+
+book	VBZ
+a	DT
+flight	JJR
+with	IN
+Etihad	CD
+Guest	NNS
+Miles	.
+.	.
+
+twenty	CD
+-	CC
+twenty	CD
+match	CD
+starts	NNS
+today	.
 .	.
 
